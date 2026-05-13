@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+    <style> 
+        .header {
+            background-color: black;
+        }  
+        .middle {
+            text-align: center;
+            color: whitesmoke;
+        }
+        .content {
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="c:\Users\Student\Music\shopify-logo.png new.png" alt="Shopify-Logo" class="logo">
+        <div class=" content">
+            <button>Log in</button>
+            <button>Start for free</button>
+        </div>
+        <div class="middle">
+            <button>Product</button>
+            <button>Why shopify?</button>
+            <button>Pricing</button>
+            <button>Enterprise</button>
+        </div>
+
+    </div>
+</body>
+</html>
