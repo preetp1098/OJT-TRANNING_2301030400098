@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested List Example</title>
+</head>
+<body>
+
+<h2>Cars List</h2>
+
+<ul>
+    <li>BMW
+        <ul>
+            <li>BMW X5</li>
+            <li>BMW M4</li>
+        </ul>
+    </li>
+
+    <li>Audi
+        <ul>
+            <li>Audi A6</li>
+            <li>Audi Q7</li>
+        </ul>
+    </li>
+
+    <li>Mercedes
+        <ul>
+            <li>C-Class</li>
+            <li>E-Class</li>
+        </ul>
+    </li>
+</ul>
+<h2>steps to run a website</h2>
+<ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+    </li>
+
+    <li>Backend
+        <ol>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Node.js</li>
+        </ol>
+    </li>
+
+    <li>Database
+        <ol>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+        </ol>
+    </li>
+</ol>
+
+</body>
+</html>
