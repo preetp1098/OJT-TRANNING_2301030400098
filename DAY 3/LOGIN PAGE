@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome-text {
+            color: white;
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .welcome-text h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text p {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .box {
+            width: 320px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 3px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .social-login {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .social-login p {
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .google {
+            background-color: #db4437;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg,
+                    #f09433,
+                    #dc2743,
+                    #cc2366,
+                    #bc1888);
+        }
+
+        .twitter {
+            background-color: black;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .bottom-text a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="welcome-text">
+            <h1>Welcome </h1>
+            <p>Login and continue shopping.</p>
+        </div>
+
+        <div class="box">
+            <h2>Login Account</h2>
+            <form>
+                <label>Email Address</label>
+                <input type="email"
+                    placeholder="Enter your email">
+
+                <label>Password</label>
+                <input type="password"
+                    placeholder="Enter your password">
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <div class="social-login">
+
+                <p>Or Login With</p>
+
+                <div class="social-icons">
+
+                    <a href="https://accounts.google.com"
+                        target="_blank"
+                        class="google">
+
+                        <i class="fa-brands fa-google"></i>
+
+                    </a>
+
+                    <a href="https://www.instagram.com"
+                        target="_blank"
+                        class="instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="https://x.com"
+                        target="_blank"
+                        class="twitter">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+                </div>
+            </div>
+            <div class="bottom-text">
+                Don't have an account?
+                <a href="#">Register</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
