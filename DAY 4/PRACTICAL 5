@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome CSS Animation</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            perspective: 1000px;
+        }
+        .box{
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+
+            transition: transform 1s, box-shadow 1s;
+        }
+        .box:hover{
+
+        
+            transform: rotateY(360deg) rotateX(15deg) scale(1.2);
+            box-shadow: 0px 20px 40px rgba(255,255,255,0.5);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            wooo hooo
+        </div>
+    </div>
+
+</body>
+</html>
