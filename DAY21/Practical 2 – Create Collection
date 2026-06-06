@@ -1,0 +1,20 @@
+const { MongoClient } = require("mongodb");
+
+const url = "mongodb://127.0.0.1:27017";
+
+async function run() {
+
+    const client = new MongoClient(url);
+
+    await client.connect();
+
+    const db = client.db("BillingDB");
+
+    await db.createCollection("customers");
+
+    console.log("Collection Created Successfully");
+
+    await client.close();
+}
+
+run();
