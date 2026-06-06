@@ -1,0 +1,29 @@
+const { MongoClient } = require("mongodb");
+
+const url = "mongodb://127.0.0.1:27017";
+
+async function run() {
+
+    const client = new MongoClient(url);
+
+    await client.connect();
+
+    const db = client.db("BillingDB");
+
+    const report = await db.collection("orders").aggregate([
+        {
+            $group: {
+                _id: null,
+                totalOrders: { $sum: 1 },
+                totalBilling: { $sum: "$amount" }
+            }
+        }
+    ]).toArray();
+
+    console.log("===== BILLING REPORT =====");
+    console.table(report);
+
+    await client.close();
+}
+
+run();
