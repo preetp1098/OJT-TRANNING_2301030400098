@@ -1,0 +1,17 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+
+    console.log("Request Received");
+
+    setTimeout(() => {
+        console.log("Timeout Callback");
+    }, 2000);
+
+    res.send("Hello Express");
+});
+
+app.listen(3000, () => {
+    console.log("Server Running on Port 3000");
+});
