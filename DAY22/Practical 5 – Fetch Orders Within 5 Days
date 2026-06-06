@@ -1,0 +1,28 @@
+const { MongoClient } = require("mongodb");
+
+const url = "mongodb://127.0.0.1:27017";
+
+async function run() {
+
+    const client = new MongoClient(url);
+
+    await client.connect();
+
+    const db = client.db("BillingDB");
+
+    const fiveDaysAgo = new Date();
+    fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+
+    const orders = await db.collection("orders").find({
+        orderDate: {
+            $gte: fiveDaysAgo
+        }
+    }).toArray();
+
+    console.log("Orders within last 5 days:");
+    console.log(orders);
+
+    await client.close();
+}
+
+run();
