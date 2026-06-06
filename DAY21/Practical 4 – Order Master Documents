@@ -1,0 +1,35 @@
+const { MongoClient } = require("mongodb");
+
+const url = "mongodb://127.0.0.1:27017";
+
+async function run() {
+
+    const client = new MongoClient(url);
+
+    await client.connect();
+
+    const db = client.db("BillingDB");
+
+    await db.collection("orders").insertMany([
+        {
+            orderId: 101,
+            customerId: 1,
+            product: "Laptop",
+            amount: 50000,
+            orderDate: new Date()
+        },
+        {
+            orderId: 102,
+            customerId: 2,
+            product: "Mouse",
+            amount: 1000,
+            orderDate: new Date()
+        }
+    ]);
+
+    console.log("Order Documents Inserted Successfully");
+
+    await client.close();
+}
+
+run();
